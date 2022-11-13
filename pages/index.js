@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 function HomePage() {
   return (
@@ -16,12 +17,15 @@ function HomePage() {
         />
       </div>
       <div className="flex flex-col space-y-1 w-64">
-        <button className="border bg-black border-black rounded text-white p-4">
+        <Link
+          href={`/launch?iss=https://launch.smarthealthit.org/v/r4/sim/eyJrIjoiMSIsImoiOiIxIiwiYiI6IjMyY2Q5ZmE0LTdhMzItNGRlMS1iY2UyLTU0OGUzNzE1MTU0MCJ9/fhir&aud=`}
+          className="border bg-black border-black rounded text-white p-4"
+        >
           Sign in
-        </button>
-        <button className="border bg-black border-black rounded text-white p-4">
+        </Link>
+        {/* <button className="border bg-black border-black rounded text-white p-4">
           Register
-        </button>
+        </button> */}
       </div>
     </div>
   );
